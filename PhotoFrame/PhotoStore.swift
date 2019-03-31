@@ -20,7 +20,7 @@ class PhotoStore {
     
     func savePhoto(image: UIImage) {
         if let data = image.jpegData(compressionQuality: 1) {
-            try? data.write(to: imageURL, options: [.automatic])
+            try? data.write(to: imageURL, options: [.atomic])
         }
     }
     
